@@ -1,1 +1,1 @@
-# 2026_CSE391_66TTNT1_NguyenThanhThanh
+👨‍💻 Thông tin sinh viên
