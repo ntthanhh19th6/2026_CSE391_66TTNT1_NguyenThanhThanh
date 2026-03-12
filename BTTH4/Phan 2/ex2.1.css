@@ -1,0 +1,54 @@
+body { 
+    font-family: sans-serif; 
+    padding: 20px; 
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.form-group input[type="text"], 
+.form-group input[type="password"], 
+.form-group input[type="email"] {
+    width: 100%; 
+    padding: 8px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+}
+
+/* Các class dùng để xử lý UI khi validate */
+.form-group input.is-invalid { 
+    border-color: red; 
+}
+
+.form-group input.is-valid { 
+    border-color: green; 
+}
+
+.error { 
+    color: red; 
+    font-size: 0.85em; 
+    display: none; /* Ẩn mặc định, JS sẽ cho hiện lên khi có lỗi */
+    margin-top: 5px; 
+}
+
+#genderError, #termsError {
+    display: none; /* Cấu hình riêng cho radio và checkbox */
+}
+
+.success-msg { 
+    color: green; 
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-top: 20px;
+    display: none;
+}
