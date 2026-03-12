@@ -1,0 +1,75 @@
+body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: 0 auto; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input[type="number"], .form-group input[type="date"], 
+.form-group select, .form-group textarea {
+    width: 100%; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; font-family: inherit;
+}
+.form-group .is-invalid { border-color: red; }
+.form-group .is-valid { border-color: green; }
+.error { color: red; font-size: 0.85em; display: none; margin-top: 5px; }
+
+.highlight-total { background: #f0f8ff; padding: 10px; border-left: 4px solid #007bff; border-radius: 4px; font-size: 1.1em;}
+#totalPrice { color: #d9534f; font-weight: bold; }
+
+/* CSS cho bộ đếm ký tự */
+#charCount.over-limit { color: red; font-weight: bold; }
+
+.summary-box { border: 2px dashed #28a745; padding: 20px; border-radius: 8px; background: #f9fdfa; margin-top: 20px; }
+.summary-box h3 { margin-top: 0; color: #28a745; }
+.total-text { font-size: 1.2em; color: #d9534f; }
+.btn-group { margin-top: 15px; display: flex; gap: 10px; }
+button { padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+#btnSubmit { background: #007bff; color: white; width: 100%; font-size: 1.1em; }
+.btn-success { background: #28a745; color: white; }
+.btn-danger { background: #dc3545; color: white; }
+.success-msg { color: #28a745; font-size: 1.2em; font-weight: bold; margin-top: 20px; text-align: center; padding: 20px; background: #e8f5e9; border-radius: 8px; }
+/* --- CSS thêm cho Phần bài tập về nhà 1 --- */
+
+/* Bọc input mật khẩu và nút mắt lại với nhau */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding-right: 40px; /* Chừa chỗ cho nút con mắt */
+}
+
+.btn-toggle {
+    position: absolute;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    outline: none;
+}
+
+/* Thanh đo độ mạnh */
+.strength-meter {
+    height: 6px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Các mức độ màu sắc */
+.strength-weak { width: 33.33%; background-color: #ff4d4d; }
+.strength-medium { width: 66.66%; background-color: #ffcc00; }
+.strength-strong { width: 100%; background-color: #28a745; }
+
+.strength-text {
+    font-size: 0.85em;
+    margin-top: 4px;
+    font-weight: bold;
+}
