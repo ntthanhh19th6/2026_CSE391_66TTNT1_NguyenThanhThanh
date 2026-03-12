@@ -1,0 +1,49 @@
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+}
+
+th, td { 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+/* CSS cho cột Điểm để báo hiệu có thể click */
+#sortScore { 
+    cursor: pointer; 
+    background-color: #f4f4f4; 
+    user-select: none; 
+}
+
+#sortScore:hover { 
+    background-color: #e0e0e0; 
+}
+
+.form-group, .filter-group { 
+    margin-bottom: 15px; 
+    padding: 15px; 
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+}
+
+.stats { 
+    margin-top: 20px; 
+    font-weight: bold; 
+}
+
+/* Tô vàng cho điểm < 5.0 */
+.low-score { 
+    background-color: yellow; 
+}
+
+.no-result { 
+    font-style: italic; 
+    color: red; 
+}
