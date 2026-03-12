@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-step Form - Bài Tập Về Nhà 2</title>
+    <link rel="stylesheet" href="ex3.2.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Đăng Ký Tài Khoản</h2>
+    
+    <div class="progress-wrapper">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+    <p id="stepIndicator" class="step-indicator">Bước 1 / 3</p>
+
+    <form id="multiForm">
+        <div class="tab" id="step1">
+            <h3>Bước 1: Thông tin cá nhân</h3>
+            <div class="form-group">
+                <label>Họ và tên</label>
+                <input type="text" id="ms_fullname" placeholder="Nhập họ tên...">
+                <span class="error" id="err_ms_fullname"></span>
+            </div>
+            <div class="form-group">
+                <label>Ngày sinh</label>
+                <input type="date" id="ms_dob">
+                <span class="error" id="err_ms_dob"></span>
+            </div>
+            <div class="form-group">
+                <label>Giới tính</label>
+                <select id="ms_gender">
+                    <option value="">-- Chọn giới tính --</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                    <option value="Khác">Khác</option>
+                </select>
+                <span class="error" id="err_ms_gender"></span>
+            </div>
+        </div>
+
+        <div class="tab" id="step2">
+            <h3>Bước 2: Thông tin tài khoản</h3>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="ms_email" placeholder="example@domain.com">
+                <span class="error" id="err_ms_email"></span>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" id="ms_password" placeholder="Tối thiểu 8 ký tự">
+                <span class="error" id="err_ms_password"></span>
+            </div>
+            <div class="form-group">
+                <label>Xác nhận mật khẩu</label>
+                <input type="password" id="ms_confirm" placeholder="Nhập lại mật khẩu">
+                <span class="error" id="err_ms_confirm"></span>
+            </div>
+        </div>
+
+        <div class="tab" id="step3">
+            <h3>Bước 3: Xác nhận thông tin</h3>
+            <div class="summary-box">
+                <p><strong>Họ tên:</strong> <span id="sum_name"></span></p>
+                <p><strong>Ngày sinh:</strong> <span id="sum_dob"></span></p>
+                <p><strong>Giới tính:</strong> <span id="sum_gender"></span></p>
+                <p><strong>Email:</strong> <span id="sum_email"></span></p>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" id="prevBtn" class="btn-secondary">Quay lại</button>
+            <button type="button" id="nextBtn" class="btn-primary">Tiếp theo</button>
+        </div>
+    </form>
+    
+    <div id="successMessage" class="success-msg" style="display:none;">
+        🎉 Đăng ký thành công!
+    </div>
+</div>
+
+<script src="ex3.2.js"></script>
+</body>
+</html>
