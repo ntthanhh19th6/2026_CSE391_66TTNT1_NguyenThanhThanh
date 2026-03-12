@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sinh Viên - Bài 1.2</title>
+    <link rel="stylesheet" href="ex2.2.css">
+</head>
+<body>
+
+    <h2>Quản lý điểm sinh viên (Có Lọc & Tìm Kiếm)</h2>
+
+    <div class="form-group">
+        <strong>Thêm mới:</strong>
+        <input type="text" id="name" placeholder="Họ và tên">
+        <input type="number" id="score" placeholder="Điểm (0-10)" min="0" max="10" step="0.1">
+        <button id="btnAdd">Thêm</button>
+    </div>
+
+    <div class="filter-group">
+        <strong>Bộ lọc:</strong>
+        <input type="text" id="searchInput" placeholder="Tìm kiếm theo tên...">
+        <select id="rankFilter">
+            <option value="All">Tất cả xếp loại</option>
+            <option value="Giỏi">Giỏi</option>
+            <option value="Khá">Khá</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Yếu">Yếu</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th id="sortScore">Điểm <span id="sortIcon"></span></th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="studentBody">
+            </tbody>
+    </table>
+
+    <div class="stats">
+        Đang hiển thị: <span id="totalCount">0</span> sinh viên | 
+        Điểm trung bình (hiện tại): <span id="avgScore">0.0</span>
+    </div>
+
+    <script src="ex2.2.js"></script>
+</body>
+</html>
