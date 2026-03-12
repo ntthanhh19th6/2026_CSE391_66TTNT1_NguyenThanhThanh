@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đặt Hàng - Bài 2.2</title>
+    <link rel="stylesheet" href="ex2.2.css">
+</head>
+<body>
+
+    <form id="orderForm">
+        <h2>Đặt Hàng Trực Tuyến</h2>
+        
+        <div class="form-group">
+            <label for="product">Sản phẩm</label>
+            <select id="product">
+                <option value="">-- Chọn sản phẩm --</option>
+                <option value="Tai nghe Tanchjim One DSP">Tai nghe Tanchjim One DSP</option>
+                <option value="Màn hình 27-inch 2K 180Hz">Màn hình 27-inch 2K 180Hz</option>
+                <option value="Router Wifi 6">Router Wifi 6</option>
+            </select>
+            <span class="error" id="productError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="quantity">Số lượng (1-99)</label>
+            <input type="number" id="quantity" min="1" max="99" value="1">
+            <span class="error" id="quantityError"></span>
+        </div>
+
+        <div class="form-group highlight-total">
+            <strong>Tổng tiền tạm tính: </strong> <span id="totalPrice">0 ₫</span>
+        </div>
+
+        <div class="form-group">
+            <label for="deliveryDate">Ngày giao hàng</label>
+            <input type="date" id="deliveryDate">
+            <span class="error" id="deliveryDateError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Địa chỉ giao hàng (>= 10 ký tự)</label>
+            <textarea id="address" rows="3"></textarea>
+            <span class="error" id="addressError"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="note">Ghi chú (<span id="charCount">0/200</span>)</label>
+            <textarea id="note" rows="2"></textarea>
+            <span class="error" id="noteError"></span>
+        </div>
+
+        <div class="form-group">
+            <label>Phương thức thanh toán</label>
+            <label><input type="radio" name="payment" value="COD"> Thanh toán khi nhận hàng (COD)</label><br>
+            <label><input type="radio" name="payment" value="Chuyển khoản"> Chuyển khoản ngân hàng</label><br>
+            <label><input type="radio" name="payment" value="Ví điện tử"> Ví điện tử (Momo/ZaloPay)</label>
+            <span class="error" id="paymentError"></span>
+        </div>
+
+        <button type="submit" id="btnSubmit">Đặt Hàng</button>
+    </form>
+
+    <div id="confirmBox" class="summary-box" style="display: none;">
+        <h3>Xác Nhận Đơn Hàng</h3>
+        <p><strong>Sản phẩm:</strong> <span id="sumProduct"></span></p>
+        <p><strong>Số lượng:</strong> <span id="sumQty"></span></p>
+        <p><strong>Ngày giao:</strong> <span id="sumDate"></span></p>
+        <p class="total-text"><strong>Tổng thanh toán:</strong> <span id="sumTotal"></span></p>
+        <div class="btn-group">
+            <button id="btnConfirm" class="btn-success">Xác nhận</button>
+            <button id="btnCancel" class="btn-danger">Hủy</button>
+        </div>
+    </div>
+
+    <div id="successMessage" class="success-msg" style="display: none;">
+        Đặt hàng thành công! 🎉 Đơn hàng đang được xử lý.
+    </div>
+
+    <script src="ex2.2.js"></script>
+</body>
+</html>
